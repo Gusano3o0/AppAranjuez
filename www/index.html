@@ -28,7 +28,30 @@
     <body>
        <div align="center"><img src="res/icon/logo.png"/></div>
                 <br/>
-                
+
+import android.os.Bundle;
+import org.apache.cordova.*;
+import android.widget.LinearLayout; 
+import com.google.ads.*;
+ 
+public class MainActivity extends DroidGap {
+    private static final String MY_AD_UNIT_ID = "YOUR_AD_UNIT_IT"; 
+    private AdView adView;
+     
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        // Loading your HTML as per PhoneGap tutorial
+        super.onCreate(savedInstanceState);
+        super.loadUrl("file:///android_asset/www/index.html");
+         
+        // Adding AdMob banner
+        adView = new AdView(this, AdSize.BANNER, a151fc0356cf385); 
+        LinearLayout layout = super.root;  
+        layout.addView(adView); 
+        adView.loadAd(new AdRequest());
+   }    
+} 
+         
 <script src="http://feeds.feedburner.com/ElEscarpelo?format=sigpro" type="text/javascript" ></script><noscript></noscript>
     </body>
 </html>
