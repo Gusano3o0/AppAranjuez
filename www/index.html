@@ -35,7 +35,7 @@ import android.widget.LinearLayout;
 import com.google.ads.*;
  
 public class MainActivity extends DroidGap {
-    private static final String MY_AD_UNIT_ID = "YOUR_AD_UNIT_IT"; 
+    private static final String MY_AD_UNIT_ID = "a151fc0356cf385"; 
     private AdView adView;
      
     @Override
@@ -45,7 +45,7 @@ public class MainActivity extends DroidGap {
         super.loadUrl("file:///android_asset/www/index.html");
          
         // Adding AdMob banner
-        adView = new AdView(this, AdSize.BANNER, a151fc0356cf385); 
+        adView = new AdView(this, AdSize.BANNER, MY_AD_UNIT_ID); 
         LinearLayout layout = super.root;  
         layout.addView(adView); 
         adView.loadAd(new AdRequest());
